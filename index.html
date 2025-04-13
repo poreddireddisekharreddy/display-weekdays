@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Week Days</title>
+    <script>
+        function displayWeekDay() {
+            // Ask user to enter a number between 1 and 7
+            let dayNumber = parseInt(prompt("Enter a number (1-7) to get the corresponding day of the week:"));
+	
+            // Variable to hold the weekday name
+            let weekDay;
+
+            // Switch case to display the weekday based on the number
+            switch(dayNumber) {
+                case 1:
+                    weekDay = "Sunday";
+                    break;
+                case 2:
+                    weekDay = "Monday";
+                    break;
+                case 3:
+                    weekDay = "Tuesday";
+                    break;
+                case 4:
+                    weekDay = "Wednesday";
+                    break;
+                case 5:
+                    weekDay = "Thursday";
+                    break;
+                case 6:
+                    weekDay = "Friday";
+                    break;
+                case 7:
+                    weekDay = "Saturday";
+                    break;
+                default:
+                    weekDay = "Invalid input! Please enter a number between 1 and 7.";
+            }
+
+            // Display the result
+            document.getElementById("result").innerHTML = `<strong>${weekDay}</strong>`;
+        }
+    </script>
+</head>
+<body onload="displayWeekDay()">
+
+    <h2>Enter a number (1-7) to get the day of the week</h2>
+    <div id="result" style="color: blue; font-size: 20px;"></div>
+
+</body>
+</html>
